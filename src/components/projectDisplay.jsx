@@ -27,8 +27,8 @@ const projectDisplay = () => {
     const projectsToDisplay = projects.filter(project => project.language !== null);
 
   return (
-    <Flex alignContent={"center"} justifyContent={"center"} flexDir="column" mt={22}>
-      <Text mt={4} textAlign={"center"} fontSize='2xl'>projects</Text>
+    <Flex alignContent={"center"} justifyContent={"center"} flexDir={{base: "column", md:"row"}} mt={22} gap={4}>
+      
       {projectsToDisplay.map((project) => (
           <ProjectCard projectTitle={project.name} projectLanguage={project.language} lastUpdated={project.updated_at}></ProjectCard>
       ))}

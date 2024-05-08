@@ -68,10 +68,11 @@ const LandingPage = () => {
        
           </Flex>
 
-       <Flex maxH={"50px"} maxW={"280px"}  flexDir={"column"} >
-            <ProjectDisplay/>
+       <Flex maxH={"50px"} width={"100%"}  flexDir={"column"} >
+       <Heading mt={8} textAlign={"center"} fontSize='4xl'>projects</Heading>
+         <ProjectDisplay/>
             </Flex>
-
+            
             </Flex>
 
             {/* Right hand side */}

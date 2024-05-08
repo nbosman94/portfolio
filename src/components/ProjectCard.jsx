@@ -5,9 +5,9 @@ const ProjectCard = ({projectTitle, projectLanguage, lastUpdated}) => {
   return (
     <>
     
-     <Card bg={"transparent"}>
+     <Card bgGradient='linear(to-r,#A3BAF3, #7697ED)'>
         <CardHeader>
-            <Heading size={"md"} color={"white"}>{projectTitle}</Heading>
+            <Text fontSize='2xl' color={"white"}>{projectTitle}</Text>
 
         </CardHeader>
 
