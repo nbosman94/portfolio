@@ -1,10 +1,10 @@
-import { Box, Card, CardBody, CardHeader, Divider, Heading, Stack, StackDivider, Text, Flex} from '@chakra-ui/react'
+import { Box, Card, CardBody, CardHeader, Divider, Stack, Text, Flex, Link} from '@chakra-ui/react'
 import React from 'react'
 
-const ProjectCard = ({projectTitle, projectLanguage, lastUpdated}) => {
+const ProjectCard = ({projectTitle, projectLanguage, lastUpdated, projectURL}) => {
   return (
     <>
-    
+    <Link href={projectURL} _hover={{boxShadow: "1px 2px 5px #4a6fce"}} >
      <Card bgGradient='linear(to-r,#A3BAF3, #7697ED)'>
         <CardHeader>
             <Text fontSize='2xl' color={"white"}>{projectTitle}</Text>
@@ -17,7 +17,7 @@ const ProjectCard = ({projectTitle, projectLanguage, lastUpdated}) => {
                 <Box >
                     {/* <Heading size={"xs"}></Heading> */}
                     <Flex gap={4}>
-                    <Text color={"#dde4f6"} as={"b"} pt={2} fontSize={"sm"}>{projectLanguage}</Text>
+                    <Text color={"#dde4f6"} as={"b"} pt={2} fontSize={"sm"}>• {projectLanguage}</Text>
                     <Text color={"#dde4f6"} mt={2} fontSize={"sm"}>{lastUpdated}</Text>
                     </Flex>
                 </Box>
@@ -35,6 +35,7 @@ const ProjectCard = ({projectTitle, projectLanguage, lastUpdated}) => {
             </Stack>
         </CardBody>
      </Card>
+     </Link>
 
     </>
   )

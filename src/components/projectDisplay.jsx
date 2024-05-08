@@ -30,7 +30,7 @@ const projectDisplay = () => {
     <Flex alignContent={"center"} justifyContent={"center"} flexDir={{base: "column", md:"row"}} mt={22} gap={4}>
       
       {projectsToDisplay.map((project) => (
-          <ProjectCard projectTitle={project.name} projectLanguage={project.language} lastUpdated={project.updated_at}></ProjectCard>
+          <ProjectCard projectTitle={project.name} projectLanguage={project.language} lastUpdated={project.updated_at} projectURL={project.html_url}></ProjectCard>
       ))}
     
     </Flex>

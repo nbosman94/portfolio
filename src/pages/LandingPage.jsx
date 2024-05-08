@@ -3,8 +3,6 @@ import { Button, Flex, Heading, Link, Text, Box, Avatar, Badge} from '@chakra-ui
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { GiBearFace } from "react-icons/gi";
-import { MdOutlineMenu } from "react-icons/md";
-import manImage from "../../public/1x/Artboard 1.png";
 import profilepic from "../../public/1x/IMG_8642.jpg"
 import ProjectDisplay from '../components/projectDisplay';
 
@@ -25,10 +23,7 @@ const LandingPage = () => {
                 </Flex>
           </Flex>
           <Flex w={"50%"} h={"100%"} p={0} >
-                {/* <Flex alignItems={"center"} justifyContent={"center"} flexDir={"row"} gap={6} w={"100%"} color={"white"}>
-                <GiBearFace size={25} />
-                <Text as='b' fontSize='xl'> natasha bosman</Text>
-                </Flex> */}
+        
           </Flex>
           <Flex w={"25%"} h={"100%"}  p={0}  >
           <Flex alignItems={"center"} justifyContent={"flex-end"} mr={10} flexDir={"row"} gap={{base:2, md:6}} w={"100%"} color={"white"}>
@@ -61,11 +56,10 @@ const LandingPage = () => {
                     <Text fontSize='sm'>Software Engineer</Text>
                   </Box>
                 </Flex>
-         <Flex>
-
-
-          <Button bg={"#dde4f6"} color={"#678cec"} _hover={{bg: "#5982ec", color: "white", transitionDuration: "0.8s"}} mt={4}>contact</Button>
-       
+         
+         <Flex gap={2} >
+            <Button bg={"#dde4f6"} color={"#678cec"} _hover={{bg: "#5982ec", color: "white", transitionDuration: "0.8s"}} mt={4}>contact</Button>
+            <Button variant={"outline"}  _hover={{bg: "#dde4f6", color: "#678cec", transitionDuration: "0.8s"}} mt={4} w={24}>cv</Button>
           </Flex>
 
        <Flex maxH={"50px"} width={"100%"}  flexDir={"column"} >
