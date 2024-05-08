@@ -9,18 +9,20 @@ import { BrowserRouter } from 'react-router-dom'
 const styles = {
   global: (props) => ({
     body:{
-      bg:mode("gray.100", "#678CEC")(props),
-      color:mode("gray.800", "#D49BAE")(props)
+      bg:mode("#678CEC", "#678CEC")(props),
+      color:mode("white", "white")(props)
     }
   })
 }
+
+// #D49BAE
 
 const config = {
   initialColorMode: 'dark',
   useSystemColorMode: false,
 }
 
-const theme = extendTheme({config, styles})
+const theme = extendTheme({ config, styles})
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

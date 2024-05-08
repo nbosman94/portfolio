@@ -1,10 +1,12 @@
 import React from 'react'
-import { Button, Flex, Heading, Link, Text } from '@chakra-ui/react'
+import { Button, Flex, Heading, Link, Text, Box, Avatar, Badge} from '@chakra-ui/react'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { GiBearFace } from "react-icons/gi";
 import { MdOutlineMenu } from "react-icons/md";
 import manImage from "../../public/1x/Artboard 1.png";
+import profilepic from "../../public/1x/IMG_8642.jpg"
+import ProjectDisplay from '../components/projectDisplay';
 
 
 const LandingPage = () => {
@@ -12,67 +14,72 @@ const LandingPage = () => {
     <Flex flexDir={"column"} >
        
         {/* Top navbar section */}
-      <Flex w={"100%"} h={"100px"} border={"4px solid "} alignItems={"center"} justifyContent={"center"} mb={20}>
-          <Flex w={"25%"} h={"100%"}  p={0} borderRight={"4px solid"} flexDir={"row"} >
-              <Flex alignItems={"center"} justifyContent={"center"} flexDir={"row"} gap={{base:2, md:8}} w={"100%"} color={"white"}>
+      <Flex w={"100%"} h={"100px"}  alignItems={"center"} justifyContent={"center"} mb={20} boxShadow={"1px 2px 5px #4a6fce"}>
+          <Flex w={"25%"} h={"100%"}  p={0}  flexDir={"row"}>
+          <Flex alignItems={"center"} justifyContent={"flex-start"} ml={10} flexDir={"row"} gap={6} w={"100%"} color={"white"}>
+                
+                <GiBearFace size={25} />
+                <Box display={{base: "none", md: "block"}}>
+                <Text as='b' fontSize={{base: "sm", md:'l'}}> natasha bosman</Text>
+                </Box>
+                </Flex>
+          </Flex>
+          <Flex w={"50%"} h={"100%"} p={0} >
+                {/* <Flex alignItems={"center"} justifyContent={"center"} flexDir={"row"} gap={6} w={"100%"} color={"white"}>
+                <GiBearFace size={25} />
+                <Text as='b' fontSize='xl'> natasha bosman</Text>
+                </Flex> */}
+          </Flex>
+          <Flex w={"25%"} h={"100%"}  p={0}  >
+          <Flex alignItems={"center"} justifyContent={"flex-end"} mr={10} flexDir={"row"} gap={{base:2, md:6}} w={"100%"} color={"white"}>
                  <a href='https://www.linkedin.com/in/natasha-bosman-4530b0172/'>
-                <FaLinkedin size={40} />
+                <FaLinkedin size={35} />
                 </a>
 
                 <a href='https://github.com/nbosman94'>
-                <FaGithubSquare size={40}/>
+                <FaGithubSquare size={35}/>
                 </a>
               </Flex>
-          </Flex>
-          <Flex w={"50%"} h={"100%"} p={0} >
-                <Flex alignItems={"center"} justifyContent={"center"} flexDir={"row"} gap={6} w={"100%"} color={"white"}>
-                <GiBearFace size={25} />
-                <Text as='b' fontSize='xl'> natasha bosman</Text>
-                </Flex>
-          </Flex>
-          <Flex w={"25%"} h={"100%"}  p={0} borderLeft={"4px solid"} >
-                <Flex alignItems={"center"} justifyContent={"center"} flexDir={"row"} gap={6} w={"100%"} cursor={"pointer"} color={"white"}>
-                <Text as='b' fontSize='xl'> menu</Text>
-                    <MdOutlineMenu size={25}/>
-                </Flex>
           </Flex>
       </Flex>
 
 
         {/* Landing Page body */}
 
-        <Flex borderLeft={"solid"} borderRight={"solid"} alignItems={"center"} h={"700px"} w={"100%"} flexDir={"column"} >
-         <Heading color={"white"} mt={35}>Welcome</Heading>
+        <Flex  alignItems={"center"} justifyContent={"center"} h={"300px"} w={"100%"} flexDir={"row"} >
+          {/* Left hand Side */}
+          <Flex alignItems={"center"} flexDir={"column"}>
+         <Heading color={"white"} size='3xl'>welcome</Heading>
+
+                  <Flex mt={4}>
+                  <Avatar src={profilepic} />
+                  <Box ml='3'>
+                    <Text fontWeight='bold'>
+                      Natasha Bosman
+                     
+                    </Text>
+                    <Text fontSize='sm'>Software Engineer</Text>
+                  </Box>
+                </Flex>
          <Flex>
 
-          <Button color={"#BBCB50"} _hover={{bg: "#D49BAE"}} mt={4}>contact</Button>
+
+          <Button bg={"#dde4f6"} color={"#678cec"} _hover={{bg: "#5982ec", color: "white", transitionDuration: "0.8s"}} mt={4}>contact</Button>
        
           </Flex>
 
-          <Flex maxH={"50px"} maxW={"280px"}  flexDir={"column"} >
-            <img src={manImage} alt='man sitting drawing' />
+       <Flex maxH={"50px"} maxW={"280px"}  flexDir={"column"} >
+            <ProjectDisplay/>
             </Flex>
 
-         
+            </Flex>
+
+            {/* Right hand side */}
+
+      
+   
         </Flex>
-        {/* <footer>
-        <Flex w={"100%"} h={"100px"} border={"4px solid "} alignItems={"center"} justifyContent={"center"}>
-          <Flex w={"25%"} h={"100%"}  p={0} borderRight={"4px solid"} flexDir={"row"} >
-              <Flex alignItems={"center"} justifyContent={"center"} flexDir={"row"} gap={{base:2, md:8}} w={"100%"} color={"white"}>
-              
-              </Flex>
-          </Flex>
-          <Flex w={"50%"} h={"100%"} p={0} >
-                <Flex alignItems={"center"} justifyContent={"center"} flexDir={"row"} gap={6} w={"100%"} color={"white"}>
-                <GiBearFace size={25} />
-                <Text as='b' fontSize='xl'> natasha bosman</Text>
-                </Flex>
-          </Flex>
-          <Flex w={"25%"} h={"100%"}  p={0} borderLeft={"4px solid"} >
-            
-          </Flex>
-      </Flex>
-      </footer> */}
+    
     </Flex>
   )
 }
