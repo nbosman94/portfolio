@@ -5,6 +5,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { GiBearFace } from "react-icons/gi";
 import profilepic from "../../public/1x/IMG_8642.jpg"
 import ProjectDisplay from '../components/projectDisplay';
+// import cv from "../../public/1x/PDF_CV_Natasha_BOSMAN_Software_Development.pdf";
 
 
 const LandingPage = () => {
@@ -58,8 +59,8 @@ const LandingPage = () => {
                 </Flex>
          
          <Flex gap={2} >
-            <Button bg={"#dde4f6"} color={"#678cec"} _hover={{bg: "#5982ec", color: "white", transitionDuration: "0.8s"}} mt={4}>contact</Button>
-            <Button variant={"outline"}  _hover={{bg: "#dde4f6", color: "#678cec", transitionDuration: "0.8s"}} mt={4} w={24}>cv</Button>
+            <Button bg={"#dde4f6"} color={"#678cec"} _hover={{bg: "#5982ec", color: "white", transitionDuration: "0.8s"}} mt={4} w={24}>contact</Button>
+            <a color={"white"} href={"../../public/1x/PDF_CV_Natasha_BOSMAN_Software_Development.pdf"} download={"NatashaBosmanCV.pdf"}><Button variant={"outline"}  _hover={{bg: "#dde4f6", color: "#678cec", transitionDuration: "0.8s"}} mt={4} w={24}>cv</Button></a>
           </Flex>
 
        <Flex maxH={"50px"} width={"100%"}  flexDir={"column"} >
